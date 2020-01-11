@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>section3</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="fontawesome-free-5.11.2-web/css/all.css">
+	<script type="text/javascript">
+ 		function subAnswer() {
+ 			var form = document.quizsection1;
+			var qu11 = form.elements['answer11'].value;
+			var qu12 = form.elements['answer12'].value;
+			var qu13 = form.elements['answer13'].value;
+			var qu14 = form.elements['answer14'].value;
+			var qu15 = form.elements['answer15'].value;
+			//var mark3 =parseInt(localStorage.getItem("totalmark"));
+			var mark3=0;
+			if(qu11 == "play"){
+				mark3+=10;
+			}
+			if(qu12 == "cleans"){
+				mark3+=10;	
+			}
+			if(qu13 == "is having"){
+				mark3+=10;
+			}
+			if(qu14 == "come"){
+				mark3+=10;
+			}
+			if(qu15 == "cry"){
+				mark3+=10;
+			}
+			localStorage.setItem("totalmark3",mark3);
+			window.location.href='result.html';
+			return false;
+ }
+ var total_seconds=60*2;
+			var c_minutes=parseInt(total_seconds/60);
+			var c_seconds=parseInt(total_seconds/60);
+			var timer;
+
+			function CheckTime () {
+
+  document.getElementById("quiz-time-left").innerHTML ='Timer:&nbsp; &nbsp;'+  c_minutes + ' m ' + ':'+ c_seconds + ' s ';
+
+
+  if (total_seconds <= 0) {
+    subAnswer();
+  } else {
+    total_seconds = total_seconds - 1;
+    c_minutes = parseInt(total_seconds / 60);
+    c_seconds = parseInt(total_seconds % 60);
+    timer = setTimeout(CheckTime, 1000);
+  }
+
+  return false;
+}
+
+timer = setTimeout(CheckTime, 1000);
+ 	</script>
+</head>
+<body class="body1" onload="return CheckTime()">
+		<form name="quizsection1" onsubmit="return subAnswer()">
+					<section>
+			<nav class="navbar navbar-expand-lg navbar-light " style="height: 50px; background-color:#3498DB; width: 100%; position:fixed;">
+      <a class="navbar-brand"id="size" href="#"><i class="fas fa-book-reader text-white "></i> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+      </div>  <div class=" sec1 sw "><label> Section3</label></div>
+
+      <div class="col-md"><h3 id="quiz-time-left" class=" " style="width: 300px ; height: 200px; text-align: center; padding-top: 63px; margin-top:50px; margin-left: 90px; color: white;" ></h3></div>
+    </nav></section>
+	   <div class="row container">
+
+
+<div class="row container">
+<div class="col-l qq">
+	<div class=" qu1 mt-5"><h1 class="ml-5">Q1</h1> <h5 class="ml-5">I _______ tennis every Sunday morning.
+ </h5>
+	     <div class="ml-5 ff"><input type="radio" name="answer11"required="required" value="playing" >playing</div>
+	     <div class="ml-5 ff"> <input  type="radio" name="answer11"required="required" value="am playing" >am playing</div>
+         <div class="ml-5 ff"> <input  type="radio" name="answer11"required="required" value="play" >play*</div>
+         <div class="ml-5 ff"> <input  type="radio" name="answer11"required="required" value="am play" >am play</div>
+	 </div>
+	<div class=" qu1 mt-5"><h1 class="ml-5">Q2</h1> <h5 class="ml-5">Jun-Sik _______ his teeth before breakfast every morning.
+ </h5>
+	     <div class="ml-5 ff"><input type="radio" name="answer12"required="required" value="will cleaned" >will cleaned</div>
+	     <div class="ml-5 ff"> <input  type="radio" name="answer12"required="required" value="cleans" >cleans*</div>
+         <div class="ml-5 ff"> <input  type="radio" name="answer12"required="required" value="is cleaning" >is cleaning</div>
+         <div class="ml-5 ff"> <input  type="radio" name="answer12"required="required" value="clean" >clean</div>
+	 </div>
+<div class=" qu1 mt-5"><h1 class="ml-5">Q3</h1> <h5 class="ml-5">Sorry, she can't come to the phone. She _______ a bath!
+</h5>
+	     <div class="ml-5 ff"><input type="radio" name="answer13"required="required" value="having" >having</div>
+	     <div class="ml-5 ff"> <input  type="radio" name="answer13"required="required" value="is having" >is having*</div>
+         <div class="ml-5 ff"> <input  type="radio" name="answer13"required="required" value="have" >have</div>
+         <div class="ml-5 ff"> <input  type="radio" name="answer13"required="required" value="has" >has</div>
+	 </div>	
+<div class=" qu1 mt-5"><h1 class="ml-5">Q4</h1> <h5 class="ml-5">How many students in your class _______ from Korea?
+</h5>
+	     <div class="ml-5 ff"><input type="radio" name="answer14"required="required" value="come" >come*</div>
+	     <div class="ml-5 ff"> <input  type="radio" name="answer14"required="required" value="comes" >comes</div>
+         <div class="ml-5 ff"> <input  type="radio" name="answer14"required="required" value="came" >came</div>
+         <div class="ml-5 ff"> <input  type="radio" name="answer14"required="required" value="are coming" >are coming</div>
+	 </div>
+<div class=" qu1 mt-5"><h1 class="ml-5">Q5</h1> <h5 class="ml-5">Babies _______ when they are hungry.
+</h5>
+	     <div class="ml-5 ff"><input type="radio" name="answer15"required="required" value="cried">cried</div>
+	     <div class="ml-5 ff"> <input  type="radio" name="answer15"required="required" value="cries">cries</div>
+         <div class="ml-5 ff"> <input  type="radio" name="answer15"required="required" value="cry">cry*</div>
+         <div class="ml-5 ff"> <input  type="radio" name="answer15"required="required" value="are crying">are crying</div>
+	 </div>	
+	 <button class="button-next" href="result.html">Finish</button>
+
+
+</div>
+</div>
+</form>
+</body>
+</html>

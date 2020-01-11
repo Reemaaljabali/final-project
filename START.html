@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>START</title>
+<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/custom.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.11.2-web/css/all.css">
+<script type="text/javascript"> 
+  localStorge.setItem("username",name);
+  localStorge.setItem("password",pass); 
+  function submit1(){
+  var form=document.form11;
+  var name=form.elements["username"].value;
+  var pass=form.elements["psw"].value;
+  window.location.href="Rule.html";
+     return false;}
+</script>
+	 
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <a class="navbar-brand"id="size" href="#"> <i class="fas fa-book-reader text-white "></i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+   <ul class="navbar-nav " style="padding-left:600px;">
+          <li class="nav-item ">
+            <a class="nav-link pl-3 font-weight-bold " id="home" href="home.html">HOME<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pl-3 font-weight-bold" id="home" href="START.html">START</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+   <div class="jumbotron">
+ <form  class="form1" name="form11"  onsubmit="return submit1()">
+        <label>Username</label>
+        <input type="text" id="username" name="username" >
+        <label>Password</label>
+        <input type="password" id="psw" name="psw" >
+        <br><br>
+        <input type="submit" value="Start Test" >
+      </form>
+
+</div>
+  <footer>
+    <section class="copyright py-2 text-center text-white">
+        <div class="container">
+          <small>Copyright © Your Website 2019</small>
+        </div>
+      </section>
+    </footer>
+</body>
+</html>

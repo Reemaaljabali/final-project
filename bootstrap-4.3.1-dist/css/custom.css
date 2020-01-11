@@ -1,0 +1,107 @@
+.jumbotron{background-image: url("../img/1.png");
+background-repeat: no-repeat;
+width: 100%;
+height: 500px;}
+#size{font-size: 30px;
+  margin-left: 250px;}
+#home{color: white;}
+.jumbotron h1,p{
+	margin-left: 600px;}
+.form1{margin-left: 800px;
+width: 400px;}
+	/* Style all input fields */
+  input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;}
+/* Style the submit button */
+input[type=submit] {
+  background-color:black;
+  color: white;}
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;}
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;}
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: blue;}
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";}
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;}
+.invalid:before{
+  position: relative;
+  left: -35px;
+  content: "✖";}
+.ff input{width:20px;}
+.hh5 h5{margin-top: 200px;
+padding-left: 100px;}
+.body1{background-color: white;}
+.sec1 , .sec2 , .sec3{
+color:white;
+height: 50px;
+margin-right: 250px;}
+.sec1, .sec2 ,.sec3, label{font-size: 30px;}
+ .qu1{width: 1000px; height: 240px; background-color: white; color:#3498DB;border-radius: 20px;
+ border-bottom:10px solid #3498DB; 
+border-left:10px solid #3498DB;  }
+.qq{margin-left: 150px;}
+.button-next{font-size: 20px; background-color: #3498DB;color:white; 
+border-radius: 10px;margin-top: 70px; width: 200px;}
+.ac{ background-color: #3498DB; height: 140px; width: 100%; }
+.prr{color: white;}
+.h44{color: white;
+ font-size: 24px;}
+.i22{font-size: 30px;
+color: white;}
+.copyright{
+background-color: #1a252f;}
+.pp1{font-size: 40px;}
+.j2{background-image: url("../img/hero-bg.jpg");
+background-repeat: no-repeat;
+width: 100%;
+height: 500px;}
+
+.bb{background-image:url(../img/english.jpg);
+background-repeat: no-repeat;
+width: 100%;
+height: 500px;}
+.score{animation-name:pll;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+  animation-iteration-count:3; }
+  @keyframes pll{
+  to{ transform: translate(0,100px);}}
+.sq{
+  border: 1px solid red;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}  
+
+
+
+  
+
+
+
+
+
+
+
+
+
