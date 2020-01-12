@@ -17,6 +17,11 @@
            $("#cli").hide();
 
   });
+        function delet(){
+          localStorage.removeItem("totalmark");
+          localStorage.removeItem("totalmark2");
+          localStorage.removeItem("totalmark3");
+        }
 	});
 </script>
 </head>
@@ -29,10 +34,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
    <ul class="navbar-nav " style="padding-left:600px;">
           <li class="nav-item ">
-            <a class="nav-link pl-3 font-weight-bold " id="home" href="home.html">HOME<span class="sr-only">(current)</span></a>
+            <a class="nav-link pl-3 font-weight-bold " id="home" href="home.html" onclick="delet()">HOME<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link pl-3 font-weight-bold" id="home" href="START.html">START</a>
+            <a class="nav-link pl-3 font-weight-bold" id="home" href="START.html" onclick="delet()">START</a>
           </li>
         </ul>
       </div>
@@ -42,8 +47,8 @@
   <h3 class="lead text-center  font-weight-bold ml-5 ">
  <section> 
     <div id="res" style=" color:red; margin-left: 50px; font-size: 30px;"><h1></h1></div>
-    <div id="res3" style=" color:black; margin-left: 50px; font-size: 30px;"><h1></h1></div>
-    <div id="res4" style=" color:green; margin-left: 50px; font-size: 30px;"><h1></h1></div>
+    <div id="res3" style=" color:black; margin-left: 30px; font-size: 30px;"><h1></h1></div>
+    <div id="res4" style=" color:green; margin-left: 20px; font-size: 30px;"><h1></h1></div>
  	<div class="score" style="border:5px double white; width: 250px; margin-left: 450px">
     <h4 class="">YOUR SCORE:</h4>
     <h2 id="total"></h2>
