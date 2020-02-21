@@ -1,125 +1,159 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>section1</title>
-	<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/custom.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="fontawesome-free-5.11.2-web/css/all.css">
-		<script type="text/javascript" src="jquery.js"></script>
+    <title>section1</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/custom.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-5.11.2-web/css/all.css">
+    <script type="text/javascript" src="jquery.js"></script>
 
-	<script type="text/javascript">
- 		function subAnswer() {
- 			var form = document.quizsection1;
-			var qu1 = form.elements['answer1'].value;
-			var qu2 = form.elements['answer2'].value;
-			var qu3 = form.elements['answer3'].value;
-			var qu4 = form.elements['answer4'].value;
-			var qu5 = form.elements['answer5'].value;
-			var mark1=0 ;
-			if(qu1 == "Had you got"){
-				mark1+=10;
-			}
-			
-			if(qu2 == "do you do"){
-				mark1+=10;	
-			}
-			if(qu3 == "does it cost"){
-				mark1+=10;
-			}
-			if(qu4 == "Have you"){
-				mark1+=10;
-			}
-			if(qu5 == "Is it"){
-				mark1+=10;
-			}
-			localStorage.setItem("totalmark",mark1);
-			window.location.href='section2.html';
-			return false;
-			
- }
- var total_seconds=60*2;
-			var c_minutes=parseInt(total_seconds/60);
-			var c_seconds=parseInt(total_seconds/60);
-			var timer;
+    <script type="text/javascript">
+        function subAnswer() {
+            var form = document.quizsection1;
+            var qu1 = form.elements['answer1'].value;
+            var qu2 = form.elements['answer2'].value;
+            var qu3 = form.elements['answer3'].value;
+            var qu4 = form.elements['answer4'].value;
+            var qu5 = form.elements['answer5'].value;
+            var mark1 = 0;
+            if (qu1 == "Had you got") {
+                mark1 += 10;
+            }
 
-			function CheckTime () {
+            if (qu2 == "do you do") {
+                mark1 += 10;
+            }
+            if (qu3 == "does it cost") {
+                mark1 += 10;
+            }
+            if (qu4 == "Have you") {
+                mark1 += 10;
+            }
+            if (qu5 == "Is it") {
+                mark1 += 10;
+            }
+            localStorage.setItem("totalmark", mark1);
+            window.location.href = 'section2.html';
+            return false;
 
-  document.getElementById("quiz-time-left").innerHTML = 'Timer:&nbsp; &nbsp;'+  c_minutes + ' m ' + ':'+ c_seconds + ' s ';
+        }
+        var total_seconds = 60 * 2;
+        var c_minutes = parseInt(total_seconds / 60);
+        var c_seconds = parseInt(total_seconds / 60);
+        var timer;
 
-  if (total_seconds <= 0) {
-    subAnswer();
-  } else {
-    total_seconds = total_seconds - 1;
-    c_minutes = parseInt(total_seconds / 60);
-    c_seconds = parseInt(total_seconds % 60);
-    timer = setTimeout(CheckTime, 1000);
-  }
+        function CheckTime() {
 
-  return false;
-}
+            document.getElementById("quiz-time-left").innerHTML = 'Timer:&nbsp; &nbsp;' + c_minutes + ' m ' + ':' + c_seconds + ' s ';
 
-timer = setTimeout(CheckTime, 1000);
- 	</script>
+            if (total_seconds <= 0) {
+                subAnswer();
+            } else {
+                total_seconds = total_seconds - 1;
+                c_minutes = parseInt(total_seconds / 60);
+                c_seconds = parseInt(total_seconds % 60);
+                timer = setTimeout(CheckTime, 1000);
+            }
+
+            return false;
+        }
+
+        timer = setTimeout(CheckTime, 1000);
+    </script>
 </head>
+
 <body class="body1" onload="return CheckTime()">
-	<form name="quizsection1" onsubmit="return subAnswer()">
-		<section>
-			<nav class="navbar navbar-expand-lg navbar-light " style=" height: 50px; width:100%; background-color:#3498DB; position:fixed;">
-      <a class="navbar-brand"id="size" href="#"><i class="fas fa-book-reader text-white "></i> </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-      </div>  <div class=" sec1 sw "><label> Section1</label></div>
+    <form name="quizsection1" onsubmit="return subAnswer()">
+        <section>
+            <nav class="navbar navbar-expand-lg navbar-light " style=" height: 50px; width:100%; background-color:#3498DB; position:fixed;">
+                <a class="navbar-brand" id="size" href="#"><i class="fas fa-book-reader text-white "></i> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                </div>
+                <div class=" sec1 sw ">
+                    <label> Section1</label>
+                </div>
 
-      <div class="col-md"><h3 id="quiz-time-left" class=" " style="width: 300px ; height: 200px; text-align: center; padding-top: 63px; margin-top:50px; margin-left: 90px; color: white;" ></h3></div>
-    </nav></section>
+                <div class="col-md">
+                    <h3 id="quiz-time-left" class=" " style="width: 300px ; height: 200px; text-align: center; padding-top: 63px; margin-top:50px; margin-left: 90px; color: white;"></h3></div>
+            </nav>
+        </section>
 
-  
+        <div class="row container">
+            <div class="col-l qq mt-5">
+                <div class=" qu1 qu2 mt-5">
+                    <h1 class="ml-5">Q1</h1>
+                    <h5 class="ml-5"> _______ any brothers or sisters?</h5>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer1" required="required" value="Have you">Have you</div>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer1" required="required" value="Have you got">Have you got</div>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer1" required="required" value="Had you got">Had you got*</div>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer1" required="required" value="you have">you have</div>
+                </div>
 
-<div class="row container">
-<div class="col-l qq mt-5">
-	<div class=" qu1 qu2 mt-5"><h1 class="ml-5">Q1</h1> <h5 class="ml-5"> _______ any brothers or sisters?</h5>
-	 <div class="ml-5 ff"><input type="radio" name="answer1" required="required" value="Have you">Have you</div>
-	 <div class="ml-5 ff"> <input  type="radio" name="answer1"required="required" value="Have you got" >Have you got</div>
-     <div class="ml-5 ff"> <input  type="radio" name="answer1"required="required" value="Had you got">Had you got*</div>
-     <div class="ml-5 ff"> <input  type="radio" name="answer1"required="required" value="you have" >you have</div>
-	 </div>
+                <div class=" qu1 mt-5">
+                    <h1 class="ml-5">Q2</h1>
+                    <h5 class="ml-5"> What _______ in your free time?</h5>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer2" required="required" value="do you">do you</div>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer2" required="required" value="do you do">do you do*</div>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer2" required="required" value="did you">did you</div>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer2" required="required" value="you have">you have</div>
+                </div>
+                <div class=" qu1 qu2 mt-5">
+                    <h1 class="ml-5">Q3</h1>
+                    <h5 class="ml-5">  How much _______ to fly to New York?</h5>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer3" equired="required" value="costs">costs</div>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer3" required="required" value="does it cost">does it cost*</div>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer3" required="required" value="Had you got">Had you got</div>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer3" required="required" value="you have">you have</div>
+                </div>
+                <div class=" qu1 mt-5">
+                    <h1 class="ml-5">Q4</h1>
+                    <h5 class="ml-5"> _______ visited the UK before?</h5>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer4" required="required" value="Have you">Have you*</div>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer4" required="required" value="Did you have">Did you have</div>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer4" required="required" value="Had you got">Had you got</div>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer4" required="required" value="you have">you have</div>
+                </div>
+                <div class=" qu1 qu2 mt-5">
+                    <h1 class="ml-5">Q5</h1>
+                    <h5 class="ml-5"> _______ expensive to live in London?</h5>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer5" required="required" value="It">It</div>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer5" required="required" value="Is">Is</div>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer5" required="required" value="Is it">Is it*</div>
+                    <div class="ml-5 ff">
+                        <input type="radio" name="answer5" required="required" value="It is">It is</div>
+                </div>
+                <button class="button-next" type="submit">NEXT SECTION</button>
 
-	<div class=" qu1 mt-5"><h1 class="ml-5">Q2</h1> <h5 class="ml-5"> What _______ in your free time?</h5>
-	 <div class="ml-5 ff"><input type="radio" name="answer2" required="required" value="do you" >do you</div>
-	 <div class="ml-5 ff"> <input  type="radio" name="answer2"required="required" value="do you do">do you do*</div>
-     <div class="ml-5 ff"> <input  type="radio" name="answer2"required="required" value="did you">did you</div>
-     <div class="ml-5 ff"> <input  type="radio" name="answer2"required="required" value="you have">you have</div>
-	 </div>
-<div class=" qu1 qu2 mt-5"><h1 class="ml-5">Q3</h1> <h5 class="ml-5">  How much _______ to fly to New York?</h5>
-	 <div class="ml-5 ff"><input type="radio" name="answer3"equired="required" value="costs">costs</div>
-	 <div class="ml-5 ff"> <input  type="radio" name="answer3"required="required" value="does it cost">does it cost*</div>
-     <div class="ml-5 ff"> <input  type="radio" name="answer3"required="required" value="Had you got">Had you got</div>
-     <div class="ml-5 ff"> <input  type="radio" name="answer3"required="required" value="you have">you have</div>
-	 </div>	
-<div class=" qu1 mt-5"><h1 class="ml-5">Q4</h1> <h5 class="ml-5"> _______ visited the UK before?</h5>
-	 <div class="ml-5 ff"><input type="radio" name="answer4"required="required" value="Have you" >Have you*</div>
-	     <div class="ml-5 ff"> <input  type="radio" name="answer4"required="required" value="Did you have">Did you have</div>
-         <div class="ml-5 ff"> <input  type="radio" name="answer4"required="required" value="Had you got">Had you got</div>
-         <div class="ml-5 ff"> <input  type="radio" name="answer4"required="required" value="you have">you have</div>
-	 </div>
-<div class=" qu1 qu2 mt-5"><h1 class="ml-5">Q5</h1> <h5 class="ml-5"> _______ expensive to live in London?</h5>
-	 <div class="ml-5 ff"><input type="radio" name="answer5"required="required" value="It" >It</div>
-	     <div class="ml-5 ff"> <input  type="radio" name="answer5"required="required" value="Is" >Is</div>
-         <div class="ml-5 ff"> <input  type="radio" name="answer5"required="required" value="Is it" >Is it*</div>
-         <div class="ml-5 ff"> <input  type="radio" name="answer5"required="required" value="It is" >It is</div>
-	 </div>	
-	 <button class="button-next" type="submit">NEXT SECTION</button>
-	 	
+            </div>
 
+        </div>
 
-</div>
-
-</div>
-
-</form>
+    </form>
 
 </body>
+
 </html>

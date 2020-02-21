@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
-		<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/custom.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="fontawesome-free-5.11.2-web/css/all.css">
-		<script type="text/javascript" src="jquery.js"></script>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/custom.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-5.11.2-web/css/all.css">
+    <script type="text/javascript" src="jquery.js"></script>
 
-	<script type="text/javascript">
-		 $("document").ready(function() {
-        $("#cli").click(function(){
-           $(".x1").show();
-           $(".x2").show(); 
-           $(".x3").show();
-           $("#cli").hide();
+    <script type="text/javascript">
+        $("document").ready(function() {
+            $("#cli").click(function() {
+                $(".x1").show();
+                $(".x2").show();
+                $(".x3").show();
+                $("#cli").hide();
 
-  });
-        function delet(){
-          localStorage.removeItem("totalmark");
-          localStorage.removeItem("totalmark2");
-          localStorage.removeItem("totalmark3");
-        }
-	});
-</script>
+            });
+
+            function delet() {
+                localStorage.removeItem("totalmark");
+                localStorage.removeItem("totalmark2");
+                localStorage.removeItem("totalmark3");
+            }
+        });
+    </script>
 </head>
+
 <body class="body1">
-	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-      <a class="navbar-brand"id="size" href="#"> <i class="fas fa-book-reader text-white "></i></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-   <ul class="navbar-nav " style="padding-left:600px;">
-          <li class="nav-item ">
-            <a class="nav-link pl-3 font-weight-bold " id="home" href="home.html" onclick="delet()">HOME<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link pl-3 font-weight-bold" id="home" href="START.html" onclick="delet()">START</a>
-          </li>
-        </ul>
-      </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" id="size" href="#"> <i class="fas fa-book-reader text-white "></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav " style="padding-left:600px;">
+                <li class="nav-item ">
+                    <a class="nav-link pl-3 font-weight-bold " id="home" href="home.html" onclick="delet()">HOME<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pl-3 font-weight-bold" id="home" href="START.html" onclick="delet()">START</a>
+                </li>
+            </ul>
+        </div>
     </nav>
     <div class="jumbotron bb">
-  <h1 class="display-4 font-weight-bold"></h1>
-  <h3 class="lead text-center  font-weight-bold ml-5 ">
+        <h1 class="display-4 font-weight-bold"></h1>
+        <h3 class="lead text-center  font-weight-bold ml-5 ">
  <section> 
-    <div id="res" style=" color:red; margin-left: 50px; font-size: 30px;"><h1></h1></div>
+    <div id="res" style=" color:red; margin-left: 20px; font-size: 30px;"><h1></h1></div>
     <div id="res3" style=" color:black; margin-left: 30px; font-size: 30px;"><h1></h1></div>
     <div id="res4" style=" color:green; margin-left: 20px; font-size: 30px;"><h1></h1></div>
- 	<div class="score" style="border:5px double white; width: 250px; margin-left: 450px">
+  <div class="score" style="border:5px double white; width: 250px; margin-left: 450px">
     <h4 class="">YOUR SCORE:</h4>
     <h2 id="total"></h2>
     </div>
-	<div class="x1" style=" border: 3px double white; width: 250px; margin-left: 450px; margin-top: 10px; display: none;"><h5>section1 score</h5>
-	<h2 id="section1"></h2>
+  <div class="x1" style=" border: 3px double white; width: 250px; margin-left: 450px; margin-top: 10px; display: none;"><h5>section1 score</h5>
+  <h2 id="section1"></h2>
     </div>
-	<div class="x2"style="border: 3px double white;width: 250px; margin-left: 450px; margin-top: 10px; display: none;"><h5>section2 score</h5>
-	<h2 id="section2"></h2>
+  <div class="x2"style="border: 3px double white;width: 250px; margin-left: 450px; margin-top: 10px; display: none;"><h5>section2 score</h5>
+  <h2 id="section2"></h2>
     </div>
-	<div class="x2" style="border: 3px double white; width: 250px; margin-left: 450px; margin-top:10px; display: none;"><h5>section3 score</h5>
+  <div class="x2" style="border: 3px double white; width: 250px; margin-left: 450px; margin-top:10px; display: none;"><h5>section3 score</h5>
     <h2 id="section3"></h2>
     </div>
     <button id="cli" style="margin-top:120px;background-color:white; color: #5499C7;margin-left:30px;height:40px;">View Detailes</button>
@@ -67,26 +70,23 @@
   <p class="font-weight-bolder" >
    </p>
 </div>
-    
-  
-
 
 <script type="text/javascript">
-		var marksec1=parseInt( localStorage.getItem('totalmark'));
-		var marksec2=parseInt( localStorage.getItem('totalmark2'));
-		var marksec3=parseInt( localStorage.getItem('totalmark3'));
+    var marksec1=parseInt( localStorage.getItem('totalmark'));
+    var marksec2=parseInt( localStorage.getItem('totalmark2'));
+    var marksec3=parseInt( localStorage.getItem('totalmark3'));
         var total=marksec1+marksec2+marksec3;
         var res2="";
         var res3="";
         var res4="";
         if (total<=90){
-        	res2="Faild";}
+          res2="Faild";}
         if(total>=91&&total<=100){
-        	res3="Good";}
+          res3="Good";}
         if(total>=101&&total<=130){
-        	res3="Very Good"}
+          res3="Very Good"}
         if(total>=131&&total<=150){
-        	res4="Excellent"}		 	
+          res4="Excellent"}     
 
         console.log(marksec1);
         console.log(marksec2);
@@ -100,6 +100,6 @@
         document.getElementById('res3').innerHTML=res3;
         document.getElementById('res4').innerHTML=res4;
 
-	</script>
+  </script>
 </body>
 </html>
